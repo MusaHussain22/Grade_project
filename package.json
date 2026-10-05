@@ -1,0 +1,19 @@
+{
+  "name": "hac-gradebook",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "frontend",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev -w server\" \"npm run dev -w frontend\"",
+    "test": "npm test -w server && npm test -w frontend",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w server",
+    "lint": "npm run lint -w frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
