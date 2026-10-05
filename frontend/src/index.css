@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --color-paper: #f3efe6;
+  --color-ink: #1c2430;
+  --color-navy: #1b3654;
+  --color-card: #fffdf8;
+  --color-line: #e4dccf;
+  --color-muted: #5c6774;
+  --color-gold: #8a5f16;
+  --color-gold-soft: #f3e6c4;
+  --color-a: #1f7a4d;
+  --color-a-soft: #e5f5ec;
+  --color-b: #1d6a8a;
+  --color-b-soft: #e6f4f8;
+  --color-c: #8a5a08;
+  --color-c-soft: #fff4d6;
+  --color-d: #b45309;
+  --color-d-soft: #ffedd5;
+  --color-f: #b42318;
+  --color-f-soft: #fde8e6;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1000px 420px at 0% -10%, rgba(181, 129, 47, 0.18), transparent 55%),
+    radial-gradient(800px 380px at 100% 0%, rgba(27, 54, 84, 0.12), transparent 50%),
+    var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+.field {
+  margin-top: 0.35rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--color-line);
+  background: white;
+  padding: 0.75rem 0.85rem;
+  font-size: 1rem;
+  color: var(--color-ink);
+}
+
+.field:focus {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 1px;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.btn-primary {
+  background: var(--color-navy);
+  color: #f7f4ee;
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  opacity: 0.6;
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  color: var(--color-navy);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
